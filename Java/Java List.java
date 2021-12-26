@@ -13,8 +13,9 @@ public class Solution {
         
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
-
-        ArrayList<Integer> al = new ArrayList<Integer>();
+        
+        //LinkedList is faster compared to ArrayList when we add/remove elements often. 
+        LinkedList<Integer> al = new LinkedList<Integer>();
         
         for(int i=0; i<N ; i++) {
             al.add(sc.nextInt());
