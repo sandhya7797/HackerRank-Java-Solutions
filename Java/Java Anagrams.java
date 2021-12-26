@@ -10,18 +10,13 @@ public class Solution {
         char[] aa = a.toUpperCase().toCharArray();
         char[] bb = b.toUpperCase().toCharArray();
         
-        java.util.Arrays.sort(aa);
-        java.util.Arrays.sort(bb);
-        
-        String a1 = new String(aa);
-        String b1 = new String(bb);
-        
-        if(a1.equals(b1)) {
-            return true;
-        } else {
+        if(aa.length!=bb.length) {
             return false;
+        } else {
+            java.util.Arrays.sort(aa);
+            java.util.Arrays.sort(bb);
+            return java.util.Arrays.equals(aa,bb);
         }
-        
     }   
     public static void main(String[] args) {
     
@@ -46,13 +41,18 @@ public class Solution {
         char[] aa = a.toUpperCase().toCharArray();
         char[] bb = b.toUpperCase().toCharArray();
         
-        if(aa.length!=bb.length) {
-            return false;
+        java.util.Arrays.sort(aa);
+        java.util.Arrays.sort(bb);
+        
+        String a1 = new String(aa);
+        String b1 = new String(bb);
+        
+        if(a1.equals(b1)) {
+            return true;
         } else {
-            java.util.Arrays.sort(aa);
-            java.util.Arrays.sort(bb);
-            return java.util.Arrays.equals(aa,bb);
+            return false;
         }
+        
     }   
     public static void main(String[] args) {
     
