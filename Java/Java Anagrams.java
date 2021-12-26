@@ -33,3 +33,34 @@ public class Solution {
         System.out.println( (ret) ? "Anagrams" : "Not Anagrams" );
     }
 }
+
+Solution 2 :
+
+import java.util.Scanner;
+
+public class Solution {
+
+    static boolean isAnagram(String a, String b) {
+        // Complete the function
+        
+        char[] aa = a.toUpperCase().toCharArray();
+        char[] bb = b.toUpperCase().toCharArray();
+        
+        if(aa.length!=bb.length) {
+            return false;
+        } else {
+            java.util.Arrays.sort(aa);
+            java.util.Arrays.sort(bb);
+            return java.util.Arrays.equals(aa,bb);
+        }
+    }   
+    public static void main(String[] args) {
+    
+        Scanner scan = new Scanner(System.in);
+        String a = scan.next();
+        String b = scan.next();
+        scan.close();
+        boolean ret = isAnagram(a, b);
+        System.out.println( (ret) ? "Anagrams" : "Not Anagrams" );
+    }
+}
